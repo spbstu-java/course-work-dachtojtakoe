@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="course.controllers.Lab2Controller"
+            alignment="TOP_CENTER">
+
+    <rowConstraints>
+        <RowConstraints percentHeight="80"/>
+        <RowConstraints percentHeight="10"/>
+        <RowConstraints percentHeight="10"/>
+    </rowConstraints>
+
+    <Label fx:id="resultLabel" GridPane.rowIndex="0" minWidth="300"
+           GridPane.halignment="CENTER" style="-fx-font-size: 16px;
+            -fx-border-color: #ccc; -fx-border-width: 1; -fx-padding: 10;"/>
+
+    <Button text="Вызвать аннотированные методы"
+            GridPane.rowIndex="1"
+            GridPane.halignment="CENTER"
+            onAction="#onCallClick"
+            style="-fx-font-size: 16px;"/>
+
+    <Button text="Очистить"
+            GridPane.rowIndex="2"
+            GridPane.halignment="CENTER"
+            onAction="#onClearClick"
+            style="-fx-font-size: 16px;"/>
+</GridPane>

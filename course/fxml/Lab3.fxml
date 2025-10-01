@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="course.controllers.Lab3Controller">
+    <columnConstraints>
+        <ColumnConstraints percentWidth="48"/>
+        <ColumnConstraints percentWidth="4"/>
+        <ColumnConstraints percentWidth="48"/>
+    </columnConstraints>
+
+    <rowConstraints>
+        <RowConstraints percentHeight="10"/>
+        <RowConstraints percentHeight="45"/>
+        <RowConstraints percentHeight="10"/>
+        <RowConstraints percentHeight="20"/>
+        <RowConstraints percentHeight="2"/>
+        <RowConstraints percentHeight="13"/>
+    </rowConstraints>
+
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+
+    <Label text="Введите текст для перевода:" GridPane.rowIndex="0"
+           GridPane.halignment="LEFT" GridPane.valignment="BOTTOM"
+           style="-fx-font-size: 16px; -fx-padding: 10;"/>
+
+    <TextArea fx:id="textForTranslation" GridPane.rowIndex="1"
+              wrapText="true"
+              style="-fx-font-size: 16px;">
+    </TextArea>
+
+    <Label text="Перевод:" GridPane.rowIndex="0" GridPane.columnIndex="2"
+           GridPane.halignment="LEFT" GridPane.valignment="BOTTOM"
+           style="-fx-font-size: 16px; -fx-padding: 10;"/>
+
+    <TextArea fx:id="textTranslated" GridPane.rowIndex="1" GridPane.columnIndex="2"
+              editable="false" wrapText="true"
+              style="-fx-font-size: 16px;">
+    </TextArea>
+
+    <Button text="Импорт текста"
+            fx:id="importTextButton"
+            GridPane.rowIndex="2"
+            GridPane.halignment="CENTER"
+            onAction="#onImportTextClick"
+            style="-fx-font-size: 16px;"/>
+
+    <Button text="Перевести"
+            GridPane.rowIndex="2"
+            GridPane.columnIndex="2"
+            GridPane.halignment="CENTER"
+            onAction="#onTranslateClick"
+            style="-fx-font-size: 16px;"/>
+
+    <Label fx:id="dictionaryPathLabel" GridPane.rowIndex="3" minWidth="300" GridPane.columnSpan="3"
+           GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" style="-fx-font-size: 16px;
+            -fx-border-color: #ccc; -fx-border-width: 1; -fx-padding: 10;"/>
+
+    <Button fx:id="importButton"
+            text="Импорт словаря"
+            GridPane.rowIndex="5"
+            GridPane.columnSpan="3"
+            GridPane.halignment="CENTER"
+            GridPane.valignment="TOP"
+            onAction="#onDictionaryImportClick"
+            style="-fx-font-size: 16px;"/>
+
+</GridPane>
