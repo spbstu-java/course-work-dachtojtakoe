@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="course.controllers.Lab1Controller"
+            alignment="TOP_CENTER">
+
+    <columnConstraints>
+        <ColumnConstraints percentWidth="100"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints percentHeight="40"/>
+        <RowConstraints percentHeight="10"/>
+        <RowConstraints percentHeight="5"/>
+        <RowConstraints percentHeight="5"/>
+        <RowConstraints percentHeight="5"/>
+        <RowConstraints percentHeight="5"/>
+        <RowConstraints percentHeight="10"/>
+        <RowConstraints percentHeight="20"/>
+    </rowConstraints>
+
+    <Label fx:id="infoLabel" GridPane.rowIndex="0"
+    GridPane.halignment="CENTER" style="-fx-font-size: 16px;
+    -fx-border-color: #ccc; -fx-border-width: 1; -fx-padding: 10;"/>
+
+    <ComboBox fx:id="movementCB" onAction="#ChangeMovement" GridPane.rowIndex="1"
+    GridPane.halignment="CENTER" style="-fx-font-size: 16px;"/>
+
+    <Label text="Начальная точка:" GridPane.rowIndex="2"
+           GridPane.halignment="CENTER" style="-fx-font-size: 16px;"/>
+
+    <TextField fx:id="startPointTF" GridPane.rowIndex="3" GridPane.halignment="CENTER" maxWidth="300">
+        <font>
+            <Font size="16"/>
+        </font>
+    </TextField>
+
+    <Label text="Конечная точка:" GridPane.rowIndex="4"
+           GridPane.halignment="CENTER" style="-fx-font-size: 16px;"/>
+
+    <TextField fx:id="endPointTF" GridPane.rowIndex="5" GridPane.halignment="CENTER" maxWidth="300">
+        <font>
+            <Font size="16"/>
+        </font>
+    </TextField>
+
+    <Button text="Перемещение"
+            GridPane.rowIndex="6"
+            GridPane.halignment="CENTER"
+            onAction="#onMoveClick"
+            style="-fx-font-size: 16px;"/>
+
+    <Label fx:id="resultLabel" GridPane.rowIndex="7" minWidth="300"
+           GridPane.halignment="CENTER" style="-fx-font-size: 16px;
+            -fx-border-color: #ccc; -fx-border-width: 1; -fx-padding: 10;"/>
+
+</GridPane>

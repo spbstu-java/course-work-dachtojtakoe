@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="course.controllers.Lab4Controller">
+
+    <columnConstraints>
+        <ColumnConstraints percentWidth="49"/>
+        <ColumnConstraints percentWidth="2"/>
+        <ColumnConstraints percentWidth="49"/>
+    </columnConstraints>
+
+    <rowConstraints>
+        <RowConstraints percentHeight="33"/>
+        <RowConstraints percentHeight="33"/>
+        <RowConstraints percentHeight="33"/>
+    </rowConstraints>
+
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <VBox GridPane.rowIndex="0" spacing="5" GridPane.valignment="CENTER">
+
+        <Label text="Среднее значение списка целых чисел"
+           style="-fx-font-size: 16px; -fx-padding: 10;"/>
+
+        <TextField fx:id="method1Input"
+                  promptText="5, 6, 115"
+                  style="-fx-font-size: 16px;">
+        </TextField>
+
+        <TextField fx:id="method1Output"
+                  editable="false"
+                  style="-fx-font-size: 16px;">
+        </TextField>
+
+        <Button text="Вызов метода"
+                alignment="CENTER_RIGHT"
+                onAction="#onCall1Click"
+                style="-fx-font-size: 16px;"/>
+    </VBox>
+
+    <VBox GridPane.rowIndex="1" spacing="5" GridPane.valignment="CENTER">
+
+        <Label text="Список строк в верхний регистр + префикс"
+               style="-fx-font-size: 16px; -fx-padding: 10;"/>
+
+        <TextField fx:id="method2Input"
+                   promptText="hello, world, how"
+                   style="-fx-font-size: 16px;">
+        </TextField>
+
+        <TextField fx:id="method2Output"
+                   editable="false"
+                   style="-fx-font-size: 16px;">
+        </TextField>
+
+        <Button text="Вызов метода"
+                alignment="CENTER_RIGHT"
+                onAction="#onCall2Click"
+                style="-fx-font-size: 16px;"/>
+    </VBox>
+
+    <VBox GridPane.rowIndex="2" spacing="5" GridPane.valignment="CENTER">
+
+        <Label text="Список квадратов всех уникальных элементов списка"
+               style="-fx-font-size: 16px; -fx-padding: 10;"/>
+
+        <TextField fx:id="method3Input"
+                   promptText="1, 1, 3, 4, 5, 8, 9, 9"
+                   style="-fx-font-size: 16px;">
+        </TextField>
+
+        <TextField fx:id="method3Output"
+                   editable="false"
+                   style="-fx-font-size: 16px;">
+        </TextField>
+
+        <Button text="Вызов метода"
+                alignment="CENTER_RIGHT"
+                onAction="#onCall3Click"
+                style="-fx-font-size: 16px;"/>
+    </VBox>
+
+    <VBox GridPane.rowIndex="0" GridPane.columnIndex="2" spacing="5" GridPane.valignment="CENTER">
+
+        <Label text="Последний элемент коллекции, либо исключение для пустой коллекции"
+               style="-fx-font-size: 16px; -fx-padding: 10;"/>
+
+        <TextField fx:id="method4Input"
+                   promptText="1, 2, 3"
+                   style="-fx-font-size: 16px;">
+        </TextField>
+
+        <TextField fx:id="method4Output"
+                   editable="false"
+                   style="-fx-font-size: 16px;">
+        </TextField>
+
+        <Button text="Вызов метода"
+                alignment="CENTER_RIGHT"
+                onAction="#onCall4Click"
+                style="-fx-font-size: 16px;"/>
+    </VBox>
+
+    <VBox GridPane.rowIndex="1" GridPane.columnIndex="2" spacing="5" GridPane.valignment="CENTER">
+
+        <Label text="Сумма четных чисел в массиве целых чисел"
+               style="-fx-font-size: 16px; -fx-padding: 10;"/>
+
+        <TextField fx:id="method5Input"
+                   promptText="1, 2, 3, 4, 5"
+                   style="-fx-font-size: 16px;">
+        </TextField>
+
+        <TextField fx:id="method5Output"
+                   editable="false"
+                   style="-fx-font-size: 16px;">
+        </TextField>
+
+        <Button text="Вызов метода"
+                alignment="CENTER_RIGHT"
+                onAction="#onCall5Click"
+                style="-fx-font-size: 16px;"/>
+    </VBox>
+
+    <VBox GridPane.rowIndex="2" GridPane.columnIndex="2" spacing="5" GridPane.valignment="CENTER">
+
+        <Label text="Строки в Map, где первый символ - ключ, остальное - значение"
+               style="-fx-font-size: 16px; -fx-padding: 10;"/>
+
+        <TextField fx:id="method6Input"
+                   promptText="how, are, you"
+                   style="-fx-font-size: 16px;">
+        </TextField>
+
+        <TextField fx:id="method6Output"
+                   editable="false"
+                   style="-fx-font-size: 16px;">
+        </TextField>
+
+        <Button text="Вызов метода"
+                alignment="CENTER_RIGHT"
+                onAction="#onCall6Click"
+                style="-fx-font-size: 16px;"/>
+    </VBox>
+</GridPane>

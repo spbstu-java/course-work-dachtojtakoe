@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+
+<GridPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="course.controllers.MainSceneController"
+          hgap="10" vgap="10">
+
+    <columnConstraints>
+        <ColumnConstraints minWidth="300"/>
+        <ColumnConstraints hgrow="ALWAYS"/>
+    </columnConstraints>
+
+    <rowConstraints>
+        <RowConstraints percentHeight="5"/>
+        <RowConstraints percentHeight="5"/>
+        <RowConstraints percentHeight="90"/>
+    </rowConstraints>
+
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <Label text="Крусовая работа - GUI приложение"
+           GridPane.columnIndex="0" GridPane.rowIndex="0"
+           GridPane.columnSpan="2"
+           style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+    <Label text="Выберите задание:"
+           GridPane.columnIndex="0" GridPane.rowIndex="1"
+           style="-fx-font-size: 16px;"/>
+
+    <VBox spacing="10"
+          GridPane.columnIndex="0" GridPane.rowIndex="2">
+        <Button text="Задание 1 - Перемещение героя"
+                onAction="#onTask1Click" prefWidth="300"
+                style="-fx-font-size: 14px;"/>
+        <Button text="Задание 2 - Аннотированные методы"
+                onAction="#onTask2Click" prefWidth="300"
+                style="-fx-font-size: 14px;"/>
+        <Button text="Задание 3 - Переводчик"
+                onAction="#onTask3Click" prefWidth="300"
+                style="-fx-font-size: 14px;"/>
+        <Button text="Задание 4 - Stream API"
+                onAction="#onTask4Click" prefWidth="300"
+                style="-fx-font-size: 14px;"/>
+    </VBox>
+
+    <VBox GridPane.columnIndex="1"
+          GridPane.rowIndex="1"
+          spacing="10" style="-fx-border-color: #ccc; -fx-border-width: 1; -fx-padding: 10;">
+        <Label fx:id="taskTitle" text="Задание 1 - Перемещение героя" style="-fx-font-size: 16px;"/>
+    </VBox>
+
+    <StackPane GridPane.columnIndex="1"
+               GridPane.rowIndex="2"
+               style="-fx-border-color: #ccc; -fx-border-width: 1;">
+        <fx:include fx:id="Lab1Panel" source="Lab1.fxml" />
+        <fx:include fx:id="Lab2Panel" source="Lab2.fxml" visible="false" managed="false"/>
+        <fx:include fx:id="Lab3Panel" source="Lab3.fxml" visible="false" managed="false"/>
+        <fx:include fx:id="Lab4Panel" source="Lab4.fxml" visible="false" managed="false"/>
+    </StackPane>
+</GridPane>
